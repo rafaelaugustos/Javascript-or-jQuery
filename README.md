@@ -7,14 +7,42 @@ Então vamos ao que importa, que é mostrar que certas coisas podem e devem ser 
 
 Vamos começar com os **SELETORES**
 
-No velho JS
 ```
+// No velho JS
 document.getElementById('myId')
 ```
-Com jQuery
 ```
+// Com jQuery
 $('#myId')
 ```
+Caso sejá uma `class`
+```
+// Javascript
+document.querySelectorAll('myClass')
+
+// Javascript "RAPIDO"
+document.getElementsByClassName('myClass')
+
+// jQuery
+$('.myClass')
+```
+Manipulando o **DOM**
+```
+// jQuery
+$('#myDiv').append('<img src="">')
+
+// Javascript (FORMA RUIM)
+document.getElementById('myDiv').innerHTML +=  '<img src="">'
+
+// Javascript (FORMA MELHOR)
+let fragment = document.createDocumentFragment()
+
+let img = document.createElement('IMG')
+img.src = ''
+
+img.appendChild(fragment)
+```
+
 
 E se formos para um lado um pouco diferente? que tal mostrar e ocultar uma `div`.
 ```
